@@ -11,16 +11,16 @@ PKL 是 Python pickle 格式，存储运动规划器（cuRobo）生成的关节�
 只能用本工具查看，HDFView / H5Web 无法打开。
 
   查看结构与数值：
-      python docs/inspect_data.py pkl data/<task>/<config>/_traj_data/episode0.pkl
+      python script/inspect_data.py pkl data/<task>/<config>/_traj_data/episode0.pkl
 
   查看结构 + 绘制关节分段轨迹图（标注每段动作名称）：
-      python docs/inspect_data.py pkl <path> --plot
+      python script/inspect_data.py pkl <path> --plot
 
   查看结构 + 绘制 EE 3D 空间轨迹图（含高度变化+夹爪状态）：
-      python docs/inspect_data.py pkl <path> --plot3d
+      python script/inspect_data.py pkl <path> --plot3d
 
   全部：
-      python docs/inspect_data.py pkl <path> --plot --plot3d
+      python script/inspect_data.py pkl <path> --plot --plot3d
 
   输出内容：
       - 左/右臂轨迹段数、总步数、仿真时间
@@ -39,19 +39,19 @@ HDF5 是二进制科学数据格式，存储逐帧的 RGB 图像（JPEG 编码�
 也可用 HDFView (sudo apt install hdfview) 或 VS Code H5Web 插件交互式浏览。
 
   仅查看结构：
-      python docs/inspect_data.py hdf5 data/<task>/<config>/data/episode0.hdf5
+      python script/inspect_data.py hdf5 data/<task>/<config>/data/episode0.hdf5
 
   查看结构 + 导出首帧图像（PNG）：
-      python docs/inspect_data.py hdf5 data/<task>/<config>/data/episode0.hdf5 --img
+      python script/inspect_data.py hdf5 data/<task>/<config>/data/episode0.hdf5 --img
 
   查看结构 + 绘制关节轨迹图（PNG）：
-      python docs/inspect_data.py hdf5 data/<task>/<config>/data/episode0.hdf5 --plot
+      python script/inspect_data.py hdf5 data/<task>/<config>/data/episode0.hdf5 --plot
 
   查看结构 + 导出前 N 帧为图像序列：
-      python docs/inspect_data.py hdf5 data/<task>/<config>/data/episode0.hdf5 --video 30
+      python script/inspect_data.py hdf5 data/<task>/<config>/data/episode0.hdf5 --video 30
 
   可同时使用多个选项：
-      python docs/inspect_data.py hdf5 <path> --img --plot --video 30
+      python script/inspect_data.py hdf5 <path> --img --plot --video 30
 
 ────────────────────────────────────────────────────────────
 环境要求
